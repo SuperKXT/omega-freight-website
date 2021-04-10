@@ -1,0 +1,12 @@
+black-darker: #1A1A1A
+black: #4D4D4D
+black-lighter: #E6E6E6
+white-red: #FFBDBD
+white: #FFFFFF
+white-blue: #CCF2FF
+red-darker: #990000
+red: #D01B1B
+red-lighter: #FF4242 
+blue-darker: #0874A6
+blue: #2A9ED4
+blue-lighter: #73C3E6
