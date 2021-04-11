@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang='en' class='scroll scroll-vertical'>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+		<title>Contact Us | Omega Freight & Logistics</title>
+		<link rel='icon' type='image/svg+xml' href='./assets/images/favicon.svg'>
+
+		<link href='./assets/styles.css' rel='stylesheet' />
+	</head>
+<body>
+
+	<header>
+		<div class='header-branding'>
+			<a href="./"><h1 class='all-caps'>Omega Freight & Logistics</h1></a>
+		</div>
+		<div class='small-menu-toggle'>☰</div>
+		<nav>
+			<ul>
+				<li><a href='./why-us.html'>Why Us?</a></li>
+				<li><a href='./services.html'>Services</a></li>
+				<li><a class="active" href='./contact-us.html'>Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+		<h1 class='red all-caps'>Contact Us</h1>
+
+		<section class="contact-section">
+
+			<div class="contact-item">
+				<div class="contact-item-label">Phone Number</div>
+				<a href="tel:+14078632124" class="contact-item-value">407-863-2124</a>
+			</div>
+
+			<div class="contact-item">
+				<div class="contact-item-label">Email</div>
+				<a href="mailto:dispatch@OmegaFreight&Logistics.com" class="contact-item-value">dispatch@OmegaFreight&Logistics.com</a>
+			</div>
+
+			<button id='launchForm' class="blue">Start With Us</button>
+
+		</section>
+
+	</main>
+
+	<footer>
+		<div class='footer-branding'>
+			<a href="./">
+				<h1>Omega</h1>
+				<h3>Freight & Logistics</h3>
+			</a>
+		</div>
+		<nav class='footer-nav'>
+			<ul>
+				<li><a href='./why-us.html'>Why Us?</a></li>
+				<li><a href='./services.html'>Services</a></li>
+				<li><a class="active" href='./contact-us.html'>Contact Us</a></li>
+			</ul>
+		</nav>
+		<img class='veteran-business-badge' src='./assets/images/veteran-business-badge.png' alt='Veteran Owned Business' />
+		<img class='support-troops-badge' src='./assets/images/support-troops-badge.png' alt='We Support Our Troops' />
+	</footer>
+
+	<div id='modalContainer' class="modal-container">
+		<div class="modal scroll scroll-vertical">
+			<h1 class="red all-caps">Reach Out To Us</h1>
+			<div id='modalClose' class="red modal-close">✖</div>
+
+			<form id='contactForm' name='Contact' method="POST" action="/thanks" data-netlify="true">
+
+				<div class="form-item">
+					<label for='name'>Name</label>
+					<input type="text" id='name' name='Name' required />
+				</div>
+
+				<div class="form-item">
+					<label for='company-name'>Company Name</label>
+					<input type="text" id='company-name' name='CompanyName' required />
+				</div>
+
+				<div class="form-item">
+					<label for='mc-or-dot-number'>MC# or DOT#</label>
+					<input type="text" id='mc-or-dot-number' name='MCorDOT' required />
+				</div>
+
+				<div class="form-item dropdown">
+					<label for='equipment-type'>Equipment Type</label>
+					<select id='equipment-type' name='EquipmentType' class="scroll" required>
+						<option value="" selected hidden>- Select Equipment -</option>
+						<option value="Reefer">Reefer</option>
+						<option value="DryVan">Dry Van (no box trucks)</option>
+						<option value="Flatbed">Flatbed (no hot shots)</option>
+						<option value="StepDeck">Step-Deck</option>
+						<option value="PowerOnly">Power Only</option>
+					</select>
+				</div>
+
+				<div class="form-item">
+					<label for='phone'>Phone Number</label>
+					<input type="tel" id='phone' name="Phone" required />
+				</div>
+
+				<div class="form-item">
+					<label for='email'>Email</label>
+					<input type="email" id='email' name="Email" required />
+				</div>
+
+				<div class="form-item checkboxes">
+					<label>Preferred Lanes</label>
+					<div class='check-container'>
+						<div class="checkbox">
+							<input id='OTR' name="OTR" type="checkbox" hidden />
+							<label for="OTR">OTR <small>(Nationwide)</small></label>
+						</div>
+						<div class="checkbox">
+							<input id='Southeast' id='Southeast' type="checkbox" hidden />
+							<label for="Southeast">Southeast <small>(AK, FL, GA AL, MS, SC, NC, VA, TN, KY, OK, DC, WV, MD LA)</small></label>
+						</div>
+						<div class="checkbox">
+							<input id='Northeast' id='Northeast' type="checkbox" hidden />
+							<label for="Northeast">Northeast <small>(ME, NH, VT, NY, NJ, RI, MA, CT, DE, PA, OH, IN, MI)</small></label>
+						</div>
+						<div class="checkbox">
+							<input id='Midwest' id='Midwest' type="checkbox" hidden />
+							<label for="Midwest">Midwest <small>(MI, WI, IL, IA, KS, NE, ND, SD, MO, MN)</small></label>
+						</div>
+						<div class="checkbox">
+							<input id='Southwest' id='Southwest' type="checkbox" hidden />
+							<label for="Southwest">Southwest <small>(CA, AZ, UT, TX, NV, CO)</small></label>
+						</div>
+						<div class="checkbox">
+							<input id='Northwest' id='Northwest' type="checkbox" hidden />
+							<label for="Northwest">Northwest <small>(WA, OR, WY, ID, MT)</small></label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-item textarea">
+					<label for='message'>Message</label>
+					<textarea id='message' name="Message" rows='3' class="scroll" required></textarea>
+				</div>
+
+				<button id='submitButton' type='submit' class="red">Submit</button>
+
+			</form>
+
+		</div>
+	</div>
+
+	<script src='./assets/scripts.js'></script>
+
+</body>
+</html>
