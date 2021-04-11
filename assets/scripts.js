@@ -8,10 +8,41 @@ function closeContactForm(e) {
 	}
 }
 
-document.getElementById('launchForm').addEventListener('click', openContactForm);
+function showMobileMenu() {
 
-document.getElementById('modalClose').addEventListener('click', closeContactForm);
+	document.getElementById('headerNav').classList.add('show');
 
-document.getElementById('modalContainer').addEventListener('click', closeContactForm);
+}
 
-document.getElementById('contactForm').addEventListener('submit', closeContactForm);
+function hideMobileMenu() {
+
+	document.getElementById('headerNav').classList.remove('show');
+
+}
+
+document.addEventListener('click', function(e) {
+	console.log(e.target)
+
+	if (e.target.id === 'launchForm') {
+		openContactForm();
+	}
+	else if (e.target.id === 'modalClose' || e.target.id === 'modalContainer') {
+		closeContactForm(e);
+	}
+	else if (e.target.id === 'showMenu') {
+		showMobileMenu();
+	}
+	else if (e.target.id === 'headerNav') {
+		e.stopImmediatePropagation();
+	}
+	else if (document.getElementById('headerNav').classList.contains('show') && e.target.id !== 'headerNavList' && e.target.id !== 'headerNav') {
+		hideMobileMenu();
+	}
+
+});
+
+document.addEventListener('submit', function(e) {
+	if (e.target.id === 'contactForm') {
+		closeContactForm(e);
+	}
+});
